@@ -19,7 +19,7 @@
                 </nav>
             </div>
         </header>
-    <section>
+        <section>
         <article>
             <div class="slidershow middle">
                 <div class="slides">
@@ -29,19 +29,19 @@
                     <input type="radio" name="r" id="r4">
                     <input type="radio" name="r" id="r5">
                     <div class="slide s1">
-                        <img src="../images/4.jpg" alt=" ">
+                    <img src="../images/4.jpg" alt=" ">
                     </div>
                     <div class="slide">
-                        <img src="../images/1.jpg" alt=" ">
+                    <img src="../images/1.jpg" alt=" ">
                     </div>
                     <div class="slide">
-                        <img src="../images/3.jpg" alt=" ">
+                    <img src="../images/3.jpg" alt=" ">
                     </div>
                     <div class="slide">
-                        <img src="../images/2.jpg" alt=" ">
+                    <img src="../images/2.jpg" alt=" ">
                     </div>
                     <div class="slide">
-                        <img src="../images/5.jpg" alt=" ">
+                    <img src="../images/5.jpg" alt=" ">
                     </div>
                 </div>
                 <div class="navigation">
@@ -55,56 +55,55 @@
         </article>
         <aside>
             <h1> how long it takes ?</h1>
-            <div class="custom-select 1" style="width:200px;">
-                <select>
+            <script src="../js/console.js"></script>
+            <div class="custom-select" style="width:200px;">
+                <select  id="list 1" onchange="GetSelectDistance()">
                     <option value="0">Destination:</option>
-                    <option value="1">Moon</option>
-                    <option value="2">Mars</option>
-                    <option value="3">Sun</option>
-                    <option value="4">Jupiter</option>
-                    <option value="5">Venus</option>
-                    <option value="6">EGS8p7</option>
-                    <option value="7">Galactic Center</option>
-                    <option value="8">Andromeda</option>
-                    <option value="9">Sirio</option>
-                    <option value="10">Ross 128 b</option>
-                    <option value="11">Alfa Centauri C</option>
-                    <option value="12">Pluto</option>
+                    <option value="384400000">Moon</option>
+                    <option value="56000000000">Mars</option>
+                    <option value="147000000000">Sun</option>
+                    <option value="594000000000">Jupiter</option>
+                    <option value="40000000000">Venus</option>
+                    <option value="1.2488e+17">EGS8p7</option>
+                    <option value="2.40019e+16">Andromeda</option>
+                    <option value="8.14664e+16">Sirio</option>
+                    <option value="1.041e+17">Ross 128 b</option>
+                    <option value="4.1315e+19">Alfa Centauri C</option>
                 </select>
             </div>
-            <div class="custom-select 2" style="width:200px;">
-                <select>
+            <div class="custom-select" style="width:200px;">
+                <select id="list 2" onchange="GetSelectVelocity()">
                     <option value="0">Vehicle:</option>
-                    <option value="1">V-2 Rocket</option>
-                    <option value="2">Falcon Heavy</option>
-                    <option value="3">New Shepard</option>
-                    <option value="4">Juno</option>
-                    <option value="5">ISS</option>
-                    <option value="6">Voyager 1</option>
-                    <option value="7">BFR</option>
-                    <option value="8">New Gleen</option>
-                    <option value="9">Sirio</option>
-                    <option value="10">Saturn V</option>
-                    <option value="11">Photon Rocket</option>
-                    <option value="12">x-15</option>
+                    <option value="16093.33">New horizon</option>
+                    <option value="73888.77">Juno</option>
+                    <option value="5127.77">Mariner 4</option>
+                    <option value="4794.72">Voyager 1</option>
+                    <option value="48277.77">Galileo</option>
+                    <option value="299999999">Photon Rocket</option>
                 </select>
             </div>
-            <button>
-                Launch
-            </button>
-            <br>
-            <canvas id="lienso" width="450px" height="300px"></canvas>
-        </aside>
-        <article>
+            <button type="button" onclick="writetime()">launch!</button>
+                <script>
+                    function writetime() {
+                        var velocity = document.getElementById("list 2").value;
+                        var distance = document.getElementById("list 1").value;
+                        var time= velocity/distance
+                         document.write("Transcurrio: ",time," segundos.");
+                        }
+                </script>
+            <a href="canvas.html">canvas</a>
+            </aside>
+            <article>
             <nav>
             <video width="500" height=290" controls preload loop>
                 <source src="../Video/Space%20Travel.mp4" type="video/mp4">
             </video>
             </nav>
-        </article>
-    </section>
-    <footer>
+
+            </article>
+        </section>
+        <footer>
         &copy 2019 space travel by joaquin daniel reyero
-    </footer>
+        </footer>
     </body>
 </html>
